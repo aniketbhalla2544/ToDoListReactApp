@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+}
+
+[class*="bi"] {
+  line-height: 0;
+}
+
+li.toDoApp__list-item {
+  color: #800080;
+  padding: 0.5rem 1rem;
+  line-height: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.toDoApp__list-item > span {
+  font-size: 1.2rem;
+  line-height: 0;
+}
+
+li.toDoApp__list-item .bi-trash:hover {
+  color: #fd1b1b;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[class*="bi"] {
+  line-height: 0;
+}
+
+section.toDoApp__container {
+  height: 100vh;
+  color: #800080;
+  position: relative;
+}
+
+section.toDoApp__container h1.page-hero-heading {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-top: 5rem;
+  margin-left: 5rem;
+  text-shadow: 0 8px rgba(0, 0, 0, 0.123);
+  text-shadow: 0 8px rgba(128, 0, 128, 0.123);
+}
+
+section.toDoApp__container img.page-hero-img {
+  width: 400px;
+  height: 500px;
+  margin-left: 5rem;
+}
+
+section.toDoApp__container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+
+section.toDoApp__container .toDoApp__wrapper {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.253);
+  border-radius: 0.8em;
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  overflow: hidden;
+  padding: 1.5rem 2rem;
+  height: 80%;
+  width: 60%;
+}
+
+@media (min-width: 768px) {
+  section.toDoApp__container .toDoApp__wrapper {
+    left: 50%;
+    transform: translateY(-10%);
+  }
+}
+
+@media (min-width: 768px) {
+  section.toDoApp__container .toDoApp__wrapper {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  section.toDoApp__container .toDoApp__wrapper {
+    width: 500px;
+  }
+}
+
+section.toDoApp__container .toDoApp__wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: -200px;
+  right: -200px;
+  z-index: -1;
+  width: 400px;
+  height: 400px;
+  background-size: contain;
+}
+
+@media (max-width: 738px) {
+  section.toDoApp__container .toDoApp__wrapper::after {
+    background-size: cover;
+  }
+}
+
+section.toDoApp__container .toDoApp__wrapper h1 {
+  text-align: center;
+  font-weight: 600;
+  color: #800080;
+  margin-bottom: 3rem;
+}
+
+section.toDoApp__container .toDoApp__wrapper form.toDoApp__flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 0;
+}
+
+section.toDoApp__container .toDoApp__wrapper form.toDoApp__flex-container button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.toDoApp__container .toDoApp__wrapper form.toDoApp__flex-container button i {
+  text-shadow: -4px 4px rgba(0, 0, 0, 0.025);
+  color: #800080;
+  font-size: 2.4rem;
+}
+
+@media (min-width: 850px) {
+  section.toDoApp__container .toDoApp__wrapper form.toDoApp__flex-container button i {
+    font-size: 3rem;
+  }
+}
+
+section.toDoApp__container .toDoApp__wrapper form.toDoApp__flex-container button i:hover {
+  color: #12c712;
+}
+
+section.toDoApp__container .toDoApp__wrapper form.toDoApp__flex-container input {
+  width: 70%;
+  border: 0;
+  border-bottom: 3px solid #800080;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+@media (min-width: 500px) {
+  section.toDoApp__container .toDoApp__wrapper form.toDoApp__flex-container input {
+    width: 80%;
+  }
+}
+
+@media (min-width: 850px) {
+  section.toDoApp__container .toDoApp__wrapper form.toDoApp__flex-container input {
+    font-size: 1.4rem;
+  }
+}
+
+section.toDoApp__container .toDoApp__wrapper form.toDoApp__flex-container input:focus {
+  outline: none;
+}
+
+section.toDoApp__container .toDoApp__wrapper ol.toDoApp__list-item-container {
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+  margin-top: 3.5rem;
+  max-height: 250px;
+  overflow-y: scroll;
+}
+/*# sourceMappingURL=toDoListApp.css.map */

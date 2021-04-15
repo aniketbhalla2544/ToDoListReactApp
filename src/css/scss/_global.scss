@@ -1,0 +1,25 @@
+
+
+$purple-theme: #800080;
+$green-success: rgb(18, 199, 18);
+$red-warn: rgb(253, 27, 27);
+$white: white;
+
+* {
+    box-sizing: border-box;
+}
+
+[class*="bi"] {
+    line-height: 0;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin boxx-shadow($alpha: 0.253) {
+    box-shadow: 0 0 15px rgba(0, 0, 0, $alpha);
+}
+
