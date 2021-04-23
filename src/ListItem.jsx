@@ -1,28 +1,14 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const ListItem = props => {
-
-    const deleteListItem = () => {
-
-        const copyLilistItemsArray = [...props.listItemsArray];
-
-        copyLilistItemsArray.forEach((itemName, index, thisArray) => {
-
-            const toFindKey = `${index}${itemName}`;
-
-            if (toFindKey === props.copyKey) thisArray.splice(index, 1);
-
-        });
-
-        props.deleteItemHandler([...copyLilistItemsArray]);
-    }
+const ListItem = ({ id, itemName, deleteItemHandler }) => {
 
     return (
         <li className="mx-0 mb-4 toDoApp__list-item">
 
-            <span>Buy {props.itemName}</span>
+            <span>Buy {itemName}</span>
 
-            <span onClick={deleteListItem}><i className="bi bi-trash"></i></span>
+            <span onClick={() => { deleteItemHandler(id) }}><i className="bi bi-trash"></i></span>
         </li>
 
     );
