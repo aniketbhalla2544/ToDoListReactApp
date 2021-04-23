@@ -12,7 +12,17 @@ const ToDoListApp = () => {
         }
     );
 
-    const [listItems, setListItems] = useState(JSON.parse(localStorage.getItem('listItems')));
+    // getting local storage list and if not pass []
+    const getLocalList = () => {
+
+        let localList = localStorage.getItem('listItems');
+
+        if (localList !== null) return JSON.parse(localList)
+        else return []
+
+    }
+
+    const [listItems, setListItems] = useState(getLocalList());
 
     const handleFormInput = e => {
 
@@ -40,10 +50,10 @@ const ToDoListApp = () => {
 
     useEffect(() => localStorage.setItem('listItems', JSON.stringify(listItems)), [listItems]);
 
-    // printing borwser stored data
-    useEffect(() => console.log(JSON.parse(localStorage.getItem('listItems'))), [listItems]);
+    // Testing : printing borwser stored data
+    // useEffect(() => console.log(JSON.parse(localStorage.getItem('listItems'))), [listItems]);
 
-    // getting local storage length
+    // Testing : getting local storage length
     // useEffect(() => console.log(localStorage.length), [listItems]);
 
     return (
